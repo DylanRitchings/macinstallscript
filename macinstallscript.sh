@@ -2,6 +2,7 @@
 
 
 function global {
+  
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
@@ -36,6 +37,13 @@ function global {
 }
 
 function work {
+  
+    mkdir ~/Documents/Work
+    cd ~/Documents/Work
+    mkdir ./Repos
+    mkdir ./Scripts
+    mkdir ./Files
+    
     brew install --cask \
       slack \
       visual-studio-code \
@@ -45,6 +53,12 @@ function work {
 }
 
 function home {
+    
+    mkdir ~/Public/Dev/
+    cd ~/Public/Dev/
+    mkdir ./Github
+    mkdir ./Scripts
+    
     brew install --cask \
         ableton-live-standard \
         steam
