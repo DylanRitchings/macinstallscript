@@ -1,49 +1,53 @@
 #!/bin/bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
-#Global
+function global {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install 
-    git \
-    scala \
-    terraform-ls \
-  
 
-brew install --cask \
-    brave-browser \
-    emacs \
-    discord \
-    gimp \
-    microsoft-office \
-    google-drive \
-    rectangle \
-    disk-inventory-x \
-    lulu \
-    avg-antivirus
+    brew install 
+        git \
+        scala \
+        terraform-ls \
 
-##emacs setup
-mkdir ~/.doom.d
 
-cd ~/.doom.d
+    brew install --cask \
+        brave-browser \
+        emacs \
+        discord \
+        gimp \
+        microsoft-office \
+        google-drive \
+        rectangle \
+        disk-inventory-x \
+        lulu \
+        avg-antivirus
 
-git clone https://github.com/DylanRitchings/DoomConfig.git
+    ##emacs setup
+    mkdir ~/.doom.d
 
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+    cd ~/.doom.d
 
-#Work
+    git clone https://github.com/DylanRitchings/DoomConfig.git
 
-brew install --cask \
-  slack \
-  visual-studio-code \
-  gpg-suite 
+    git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+    ~/.emacs.d/bin/doom install
 
-brew install awscli aws-vault pre-commit tfsec tflint terrascan terraform-docs checkov shellcheck black flake8 jq tfenv pass
+}
 
-#home
+function work {
+    brew install --cask \
+      slack \
+      visual-studio-code \
+      gpg-suite 
 
-brew install --cask \
-    ableton-live-standard \
-    steam
-    
+    brew install awscli aws-vault pre-commit tfsec tflint terrascan terraform-docs checkov shellcheck black flake8 jq tfenv pass
+}
+
+function home {
+    brew install --cask \
+        ableton-live-standard \
+        steam
+}
+
+
