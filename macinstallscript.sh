@@ -1,6 +1,10 @@
 #!/bin/bash
 
 
+
+
+
+# Run global on both accounts
 function global {
   
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -10,7 +14,8 @@ function global {
         git \
         scala \
         terraform-ls \
-        gh
+        gh \
+        zsh
 
 
     brew install --cask \
@@ -24,8 +29,19 @@ function global {
         disk-inventory-x \
         lulu \
         avg-antivirus
-
-    ##emacs setup
+    
+    #zshell setup
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    
+    rm ~/.zshrc
+    
+    cat <<EOF > ~/.zshrc
+    if [ -f ~/Public/Dev/Config/zshrc/.zshrc ]; then
+        source ~/Public/Dev/Config/zshrc/.zshrc
+    fi
+    EOF
+    
+    #emacs setup
     mkdir ~/.doom.d
 
     cd ~/.doom.d
@@ -40,10 +56,6 @@ function global {
     gh auth login -w
 }
 
-#after github login and other functions
-function afterGlobal {
-    
-}
 
 function work {
   
@@ -61,11 +73,6 @@ function work {
     brew install awscli aws-vault pre-commit tfsec tflint terrascan terraform-docs checkov shellcheck black flake8 jq tfenv pass
 }
 
-#after github login and other functions
-function afterWork {
-    
-}
-
 function home {
     mkdir ~/Public/Dev/
     cd ~/Public/Dev/
@@ -79,4 +86,14 @@ function home {
         steam
 }
 
+#after github login and other functions
+function afterGlobal {
+    
+    
+}
 
+function afterWork {
+    git clone https://github.com/DylanRitchings/zshrc.git ~/Public/Dev/Config/zshrc/.zshrc  
+    
+    echo "Todo aws-vault login, git config"
+}
