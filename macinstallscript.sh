@@ -19,15 +19,23 @@ function brewTermFor {
 
 #Global
 
-globalTerm (
+globalTerm=(
     git
   )
+  
+brewTermFor $globalTerm
 
 globalApp=(
     brave-browser
     emacs
+    discord
+    gimp
+    microsoft-office
 )
 
+brewAppFor $globalApp
+
+#emacs setup
 mkdir ~/.doom.d
 
 cd ~/.doom.d
@@ -40,6 +48,8 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 #Work
 
 workApp=(
+  slack
+  
 )
 
 
@@ -51,3 +61,5 @@ homeApp=(
     steam
     
 )
+
+brewAppFor $homeApp
