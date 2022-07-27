@@ -36,6 +36,11 @@ function global {
 
 }
 
+#after github login and other functions
+function afterGlobal {
+    
+}
+
 function work {
   
     mkdir ~/Documents/Work
@@ -52,8 +57,12 @@ function work {
     brew install awscli aws-vault pre-commit tfsec tflint terrascan terraform-docs checkov shellcheck black flake8 jq tfenv pass
 }
 
-function home {
+#after github login and other functions
+function afterWork {
     
+}
+
+function home {
     mkdir ~/Public/Dev/
     cd ~/Public/Dev/
     mkdir ./Github
