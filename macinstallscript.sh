@@ -58,6 +58,7 @@ function home {
     cd ~/Public/Dev/
     mkdir ./Github
     mkdir ./Scripts
+    mkdir ./Files
     
     brew install --cask \
         ableton-live-standard \
