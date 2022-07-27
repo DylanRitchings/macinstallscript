@@ -97,3 +97,22 @@ function afterWork {
     
     echo "Todo aws-vault login, git config"
 }
+
+
+#todo git config
+[user]
+	name = dylanritchings
+	email = dylanritchings1998@gmail.com
+
+[includeIf "gitdir:~/Dev/work/"]
+  path = ~/Dev/work/.gitconfig
+
+[credential]
+	helper = store
+
+
+[core]
+	pager = less -F -X
+	excludesfile = /home/dylan/.gitignore
+[init]
+	defaultBranch = main
