@@ -36,9 +36,10 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 
 brew install --cask \
   slack \
-  visual-studio-code
+  visual-studio-code \
+  gpg-suite 
 
-
+brew install awscli aws-vault pre-commit tfsec tflint terrascan terraform-docs checkov shellcheck black flake8 jq tfenv pass
 
 #home
 
