@@ -95,24 +95,6 @@ function afterGlobal {
 function afterWork {
     git clone https://github.com/DylanRitchings/zshrc.git ~/Public/Dev/Config/zshrc/.zshrc  
     
-    echo "Todo aws-vault login, git config"
+    echo "Todo aws-vault login and files, git config"
 }
 
-
-#todo git config
-[user]
-	name = dylanritchings
-	email = dylanritchings1998@gmail.com
-
-[includeIf "gitdir:~/Dev/work/"]
-  path = ~/Dev/work/.gitconfig
-
-[credential]
-	helper = store
-
-
-[core]
-	pager = less -F -X
-	excludesfile = /home/dylan/.gitignore
-[init]
-	defaultBranch = main
