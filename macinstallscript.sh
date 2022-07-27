@@ -100,7 +100,7 @@ function afterWork {
     cp ./work ~/Documents/Work/.gitconfig 
 
     
-    echo "Todo aws-vault login and files, git config"
+    
 }
 
 
@@ -113,6 +113,7 @@ function afterGlobal {
     
     cp ./.gitignore ~/.gitignore
     
+    echo "Todo aws-vault login and files, test"
 }
 
 
