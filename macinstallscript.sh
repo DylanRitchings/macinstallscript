@@ -2,40 +2,24 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
-function brewAppFor {
-    for app in $1;
-    do
-        brew install --cask "$app"
-    done
-}
-
-function brewTermFor {
-    for app in $1;
-    do
-        brew install "$app"
-    done
-}
-
-
 #Global
 
-globalTerm=(
-    git
-  )
+brew install 
+    git \
+    scala \
+    terraform-ls \
   
-brewTermFor $globalTerm
 
-globalApp=(
-    brave-browser
-    emacs
-    discord
-    gimp
-    microsoft-office
-)
+brew install --cask \
+    brave-browser \
+    emacs \
+    discord \
+    gimp \
+    microsoft-office \
+    google-drive \
+    rectangle
 
-brewAppFor $globalApp
-
-#emacs setup
+##emacs setup
 mkdir ~/.doom.d
 
 cd ~/.doom.d
@@ -47,19 +31,14 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 
 #Work
 
-workApp=(
+brew install --cask \
   slack
-  
-)
 
 
 
 #home
 
-homeApp=(
-    ableton-live-standard
+brew install --cask \
+    ableton-live-standard \
     steam
     
-)
-
-brewAppFor $homeApp
