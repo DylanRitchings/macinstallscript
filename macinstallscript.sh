@@ -10,6 +10,7 @@ function global {
         git \
         scala \
         terraform-ls \
+        gh
 
 
     brew install --cask \
@@ -33,7 +34,10 @@ function global {
 
     git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
     ~/.emacs.d/bin/doom install
-
+    
+    
+    
+    gh auth login -w
 }
 
 #after github login and other functions
@@ -68,6 +72,7 @@ function home {
     mkdir ./Github
     mkdir ./Scripts
     mkdir ./Files
+    mkdir ./Config
     
     brew install --cask \
         ableton-live-standard \
