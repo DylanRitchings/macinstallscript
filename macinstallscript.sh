@@ -64,6 +64,7 @@ function work {
     mkdir ./Repos
     mkdir ./Scripts
     mkdir ./Files
+    mkdir ./Temp
     
     brew install --cask \
       slack \
@@ -80,6 +81,7 @@ function home {
     mkdir ./Scripts
     mkdir ./Files
     mkdir ./Config
+    mkdir ./Temp
     
     brew install --cask \
         ableton-live-standard \
@@ -87,14 +89,30 @@ function home {
 }
 
 #after github login and other functions
-function afterGlobal {
-    
-    
-}
 
 function afterWork {
     git clone https://github.com/DylanRitchings/zshrc.git ~/Public/Dev/Config/zshrc/.zshrc  
     
+    cd ~/Public/Dev/Temp
+    
+    git clone https://github.com/DylanRitchings/GitConfig.git
+
+    cp ./work ~/Documents/Work/.gitconfig 
+
+    
     echo "Todo aws-vault login and files, git config"
 }
+
+
+##run in both accounts
+function afterGlobal {
+
+    cd ~/Public/Dev/Temp
+    
+    cp ./root ~/.gitconfig
+    
+    cp ./.gitignore ~/.gitignore
+    
+}
+
 
