@@ -17,7 +17,10 @@ brew install --cask \
     gimp \
     microsoft-office \
     google-drive \
-    rectangle
+    rectangle \
+    disk-inventory-x \
+    lulu \
+    avg-antivirus
 
 ##emacs setup
 mkdir ~/.doom.d
@@ -32,7 +35,8 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 #Work
 
 brew install --cask \
-  slack
+  slack \
+  visual-studio-code
 
 
 
