@@ -29,7 +29,7 @@ function global {
 
     cd ~/.doom.d
 
-    git clone https://github.com/DylanRitchings/DoomConfig.git
+    git clone https://github.com/DylanRitchings/DoomConfig.git .
 
     git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
     ~/.emacs.d/bin/doom install
