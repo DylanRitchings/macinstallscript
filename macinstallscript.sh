@@ -15,7 +15,9 @@ function global {
         scala \
         terraform-ls \
         gh \
-        zsh
+        zsh \
+        sbt \
+        python
 
 
     brew install --cask \
@@ -28,7 +30,8 @@ function global {
         rectangle \
         disk-inventory-x \
         lulu \
-        avg-antivirus
+        avg-antivirus \
+        spotify
     
     #zshell setup
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
