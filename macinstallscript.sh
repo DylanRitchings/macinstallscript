@@ -88,7 +88,8 @@ function home {
     
     brew install --cask \
         ableton-live-standard \
-        steam
+        steam \
+        surge-xt
 }
 
 #after github login and other functions
