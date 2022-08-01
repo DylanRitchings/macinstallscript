@@ -119,5 +119,3 @@ function afterGlobal {
     
     echo "Todo aws-vault login and files, test"
 }
-
-
