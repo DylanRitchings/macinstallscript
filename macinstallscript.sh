@@ -38,7 +38,7 @@ function global {
     
     rm ~/.zshrc
     
-    cat <<EOF > ~/.zshrc
+    cat >>EOF < "~/.zshrc"
     if [ -f ~/Public/Dev/Config/zshrc/.zshrc ]; then
         source ~/Public/Dev/Config/zshrc/.zshrc
     fi
