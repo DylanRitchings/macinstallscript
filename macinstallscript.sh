@@ -5,7 +5,7 @@
 
 
 # Run global on both accounts
-function global {
+function globalBrew {
   
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -32,7 +32,9 @@ function global {
         lulu \
         avg-antivirus \
         spotify
-    
+}
+
+function setupGlobal {
     #zshell setup
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     
